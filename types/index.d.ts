@@ -35,7 +35,7 @@ interface CreateFeedbackParams {
 interface User {
   name: string;
   email: string;
-  id: string;
+  id?: string;
 }
 
 interface InterviewCardProps {
@@ -48,7 +48,7 @@ interface InterviewCardProps {
 }
 
 interface AgentProps {
-  userName: string;
+  userName: string | undefined;
   userId?: string;
   interviewId?: string;
   feedbackId?: string;
@@ -67,7 +67,7 @@ interface GetFeedbackByInterviewIdParams {
 }
 
 interface GetLatestInterviewsParams {
-  userId: string;
+  userId?: string;
   limit?: number;
 }
 
